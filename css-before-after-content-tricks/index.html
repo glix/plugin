@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>CSS content and before / after tricks</title>
+	<style type="text/css">
+		body {
+			background: #fafafa url(black-Linen.png);
+		}
+			#container {
+				position: relative;
+				width: 960px;
+				margin: 50px auto 0;
+				padding: 10px 0;
+				background: #fafafa url(brushed_alu.png);
+				
+				/*** cross browser box shadow ***/
+				-moz-box-shadow: 0 0 2px #fff;
+				-webkit-box-shadow: 0 0 2px #fff;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Glow(color=#ffffff,strength=3)";
+				filter:
+					progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=0,strength=3)
+					progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=90,strength=3)
+					progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=180,strength=3)
+					progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=270,strength=3);
+				box-shadow: 0 0 2px #fff;
+			}
+			#container > p, #container h1, #container h2, #container h3, #container h4, #container h5 {
+				font-family: "arial";
+				padding: 10px 20px 0;
+				margin: 0
+			}
+			blockquote {
+				padding-top: 20px;
+				overflow: hidden;
+				font-size: 18px;
+				line-height: 150%;
+				color: #454545;
+			}
+			blockquote:before {
+				display: block;
+				float: left;
+				margin: 10px 15px 0 0;
+				font-size: 100px;
+				content: open-quote;
+				color: #bababa;
+				text-shadow: 0 1px 1px #909090;
+			}
+			blockquote:after {
+				content: none;
+				/* could be content:close-quote; but lets keep it clean*/
+			}
+				blockquote p {
+					padding: 0;
+					margin: 0;
+				}
+				.cite {
+					font-size: 0.75em;
+					text-align: right;
+				}
+			a {
+				color: #c10000;
+				text-decoration: none;
+			}
+			a:after {
+				padding: 5px 15px;
+				margin: 0 10px 0 5px;
+				content: "";
+				background: url(external.png) no-repeat;
+			}
+			a[href^="#mysite"]:after {
+				/* let's reset defined stuff */
+				padding: 0;
+				margin: 0;
+				content: none;
+				background: none no-repeat;
+			}
+			
+			a[href$=".pdf"] { margin-right: 10px; }
+			a[href$=".pdf"]:before {
+				padding: 5px 15px;
+				margin: 0 5px 0 10px;
+				content: "";
+				background: url(pdficon.png) no-repeat;
+			}
+			.tooltip:hover:after {
+				position: absolute;
+				padding: 5px 10px;
+				margin: -25px 0 0 -10px;
+				font-size: 12px;
+				content: attr(title);
+				color: #333333;
+				text-shadow: 0 1px 1px #909090;
+				background: #ffffff;
+				border: 1px solid #ffdada;
+			}
+	</style>
+</head>
+<body id="page-1">
+	<div id="container">
+		<h1>Phasellus vulputate</h1>
+		<h2>Quisque mattis mauris</h2>
+		<p>Phasellus vulputate, erat vel ultricies pulvinar, turpis ligula lobortis nisl, in euismod risus nisi ac orci. Nunc ultrices mi vitae tortor sagittis molestie. Maecenas semper imperdiet arcu eu pharetra.</p>
+		<blockquote>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus est, egestas vel aliquet at, pellentesque nec lorem. Pellentesque molestie bibendum eros, eu suscipit nisi volutpat fringilla.</p>
+			<p class="cite"><cite>by Albert Einstein</cite></p>
+		</blockquote>
+		<h1>Phasellus vulputate</h1>
+		<p>Lorem ipsum dolor sit amet, <a href="#mysite.pdf">download this pdf</a> consectetur adipiscing elit. Maecenas metus est, egestas vel aliquet at, pellentesque nec lorem. Pellentesque molestie bibendum eros, eu suscipit nisi volutpat fringilla.</p>
+		<p>Vivamus fringilla nisl ut ante commodo porta. <a href="#mysite#mylink" class="tooltip" title="Wow, CSS pure tooltips!">This link has a fancy tooltip</a>. Morbi ipsum nunc, sollicitudin ac pretium pretium, iaculis vel enim. Nulla cursus porta orci, sed vulputate magna feugiat et. Aliquam nibh massa, pharetra tincidunt vehicula ac, pellentesque vitae nibh. <a href="#othersite">This is an external site link</a> In lobortis semper eros fermentum pretium. Sed posuere, urna eget ornare luctus, mi lectus lacinia leo, sit amet faucibus orci ipsum sit amet ipsum. Maecenas sapien neque, ultrices a lacinia sit amet, fermentum non enim. Integer at venenatis orci. In hac habitasse platea dictumst.Integer at venenatis orci. In lobortis semper eros fermentum pretium. Sed posuere, urna eget ornare luctus, mi lectus lacinia leo, sit amet faucibus orci ipsum sit amet ipsum</p>
+	</div>
+</body>
+</html>
