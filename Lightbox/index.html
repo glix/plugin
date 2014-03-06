@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Modal Demo</title>
+<meta name="viewport" content="width=device-width">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!-- Link to the built CSS -->
+<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+<h2>Examples</h2>
+
+<!-- Call the modal by clicking this link --> 
+<a href="#modal-text" class="call-modal" title="Clicking this link shows the modal">Demo</a> 
+
+<!-- A modal with its content -->
+<section class="semantic-content" id="modal-text"
+				tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+<div class="modal-inner">
+<header>
+<h2 id="modal-label">Headline</h2>
+</header>
+<div class="modal-content">
+<p>Content.</p>
+</div>
+<footer>
+<p>Footer</p>
+</footer>
+</div>
+
+<!-- Use Hash-Bang to maintain scroll position when closing modal --> 
+<a href="#!" class="modal-close" title="Close this modal"
+					data-dismiss="modal">&times;</a> </section>
+<script src="modal.js"></script><!-- JS for Modal -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<p style="margin-top:20px;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+</body>
+</html>
