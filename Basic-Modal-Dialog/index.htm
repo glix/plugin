@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs" class="no-js">
+<head>
+<meta charset="utf-8" />
+<title>jQuery Mirekbenes Modal Examples</title>
+<meta name="viewport" content="width=device-width" />
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/modal.css" />
+</head>
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/lightbox/Basic-jQuery-Modal-Dialog-Plugin-Mirekbenes-Modal.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1 style="margin-top:150px;">jQuery Mirekbenes Modal Examples</h1>
+<pre class="prettyprint">
+	<code>&lt;a href="#" data-modal-open="modal-1"&gt;Show&lt;/a&gt;</code>
+</pre>
+<div class="example"> <a href="#" data-modal-open="modal-1">Show</a> </div>
+<pre class="prettyprint">
+	<code>&lt;a href="#" data-modal-open="modal-1" data-animation="fade"&gt;Fade&lt;/a&gt;</code>
+</pre>
+<div class="example"> <a href="#" data-modal-open="modal-1" data-animation="fade">Fade</a> </div>
+<pre class="prettyprint">
+	<code>&lt;a href="#" data-modal-open="modal-1" data-animation="slideFade"&gt;Slide and fade&lt;/a&gt;</code>
+</pre>
+<div class="example"> <a href="#" data-modal-open="modal-1" data-animation="slideFade">Slide and fade</a> </div>
+<pre class="prettyprint">
+<code>$('.open-modal-2').click(function(e) {
+    e.preventDefault();
+    $('#modal-2').mbModal({
+        animation: 'slideFade', // fade, none is default
+        animationspeed: 600,
+        overlayClose: false, // false, true is default
+        escClose: false // false, true is default   
+    });
+});</code>
+</pre>
+<div class="example"> <a href="#modal-2" class="open-modal-2">Manual configuration</a> </div>
+<div id="modal-1" class="mb-modal">
+<h1>Headline</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque tincidunt diam, nec aliquet tortor mattis sed. In faucibus, velit et varius sodales, mauris felis hendrerit nisl, at interdum leo nisl sit amet est.</p>
+<div class="close-modal">&#215;</div>
+</div>
+<div id="modal-2" class="mb-modal">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/uDMVfFgykP8" frameborder="0" allowfullscreen></iframe>
+<div class="close-modal">&#215;</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="js/modal.min.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> 
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script> 
+<script type="text/javascript">
+$(function (){
+	$('.open-modal-2').click(function(e) {
+	    e.preventDefault();
+	    $('#modal-2').mbModal({
+	        animation:'slideFade',
+	        animationspeed: 600,
+	        overlayClose: false,
+	        escClose: false
+	    });
+	});
+});
+</script> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

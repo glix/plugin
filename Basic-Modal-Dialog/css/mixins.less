@@ -1,0 +1,23 @@
+// ==========================================================================
+//   BASE MIXINS
+// ==========================================================================
+
+// .rounded(5px);
+.rounded(@radius:2px) {-webkit-border-radius:@radius; -moz-border-radius:@radius; border-radius:@radius;}
+
+// .border-radius(5px, 0, 0, 5px);
+.border-radius(@topright:0, @bottomright:0, @bottomleft:0, @topleft:0) {-webkit-border-top-right-radius:@topright; -webkit-border-bottom-right-radius:@bottomright; -webkit-border-bottom-left-radius:@bottomleft; -webkit-border-top-left-radius:@topleft; -moz-border-radius-topright:@topright; -moz-border-radius-bottomright:@bottomright; -moz-border-radius-bottomleft:@bottomleft; -moz-border-radius-topleft:@topleft; border-top-right-radius:@topright; border-bottom-right-radius:@bottomright; border-bottom-left-radius:@bottomleft; border-top-left-radius:@topleft;}
+
+// .box-shadow(0 1px 2px #999);
+.box-shadow(@arguments) {-webkit-box-shadow:@arguments; -moz-box-shadow:@arguments; box-shadow:@arguments;}
+
+// .inner-shadow(0, 1px, 2px, 0.4);
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {-webkit-box-shadow:inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha); -moz-box-shadow:inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha); box-shadow:inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);}
+
+//.opacity(0.8);
+.opacity(@opacity: 0.5) {-moz-opacity:@opacity; -khtml-opacity:@opacity; -webkit-opacity:@opacity; opacity:@opacity; @opperc: @opacity * 100; -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})"; filter: ~"alpha(opacity=@{opperc})";}
+
+//.box-sizing(content-box);
+.box-sizing(@sizing:border-box) {-ms-box-sizing:@sizing; -moz-box-sizing:@sizing; -webkit-box-sizing:@sizing; box-sizing:@sizing;}
+
+// ==========================================================================

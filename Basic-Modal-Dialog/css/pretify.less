@@ -1,0 +1,94 @@
+// Pretty printing styles. Used with prettify.js.
+// Based on Solarized by Ethan Schoonover 
+
+pre .str,
+code .str {
+    color:#52b2aa;
+} // string  - lemon
+
+pre .kwd, 
+code .kwd {
+    color:#c79c26;
+} // keyword - red
+
+pre .com, 
+code .com {
+    color:#859ca3; font-style:italic;
+} // comment - brown
+
+pre .typ, 
+code .typ {
+    color:#c79c26;
+} // type - purple 
+
+pre .lit, 
+code .lit {
+    color:#88a6c6;
+} // literal - blue
+
+pre .pun, 
+code .pun {
+    color:#e0e2e4;
+} // punctuation - white
+
+pre .pln, 
+code .pln {
+    color:#e0e2e4;
+} // plaintext - white
+
+pre .tag, 
+code .tag {
+    color:#4c9ed4;
+} // html/xml tag - yellow
+
+pre .atn, 
+code .atn {
+    color:#88a6c6;
+} // html/xml attribute name  - white
+
+pre .atv, 
+code .atv {
+    color:#52b2aa;
+} // html/xml attribute value - green
+
+pre .dec, 
+code .dec {
+    color:#4c9ed4;
+} // decimal - blue 
+
+.prettyprint {
+    display:block;
+    overflow:auto;
+    overflow-y:hidden;
+    margin:0!important;
+    padding:10px 12px!important;
+    background:#062a34;
+    border:1px solid rgba(0,0,0, .3)!important;
+    .box-shadow(inset 0 0 5px rgba(0,0,0,.2)); 
+    white-space:pre-wrap; 
+    word-wrap:break-word;
+}
+
+.prettyprint span {
+    display:none;
+}
+
+.prettyprint code {
+    float:left; 
+    width:100%; 
+    font:12px/20px monospace, sans-serif;
+}
+
+.prettyprint code span {
+    display:inline;
+}
+
+ol.linenums {
+    margin-top:0;
+    margin-bottom:0;
+    color:#aeaeae;
+}
+
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {
+    list-style-type:none;
+}

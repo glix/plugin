@@ -1,0 +1,32 @@
+.mb-modal-overlay {
+display: none;
+position: fixed;
+z-index: 100;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+opacity: .4;
+filter: alpha(opacity=40);
+}
+.mb-modal {
+display: none;
+float: left;
+position: absolute;
+z-index: 101;
+top: 100px;
+left: 50%;
+width: 420px;
+padding: 20px;
+background: #fff;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+#modal-1 {
+width: 600px;
+}
