@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Efecto Parallax Plugin Demo</title>
+<!-- CSS Code -->
+<link rel="stylesheet" href="style.css">
+<!-- JS Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>
+			$(document).ready(function(){
+			    $('section[data-type="parallax_section"]').each(function(){
+			        var $bgobj = $(this); // Variable para asignacion de objeto
+			        $(window).scroll(function() {
+			        	$window = $(window);
+			            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+			            // cordinadas del background
+			            var coords = '50% '+ yPos + 'px';
+			            // moviendo el background
+			            $bgobj.css({ backgroundPosition: coords });
+			        });
+			    });
+			});
+
+		</script>
+</head>
+<body>
+<section id="home" data-type="parallax_section" data-speed="10">
+<article>
+<h2>jQuery Efecto Parallax Plugin Demo</h2>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</article>
+</section>
+<section id="seccion2" data-type="parallax_section" data-speed="10">
+<article>
+<div class="geekhome"> </div>
+<h2>Pagina: 2</h2>
+</article>
+</section>
+<section id="section3" data-type="parallax_section" data-speed="10">
+<article>
+<div class="geekhome"> </div>
+<h2>Pagina: 3</h2>
+</article>
+</section>
+</body>
+</html>
